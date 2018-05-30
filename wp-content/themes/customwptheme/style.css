@@ -444,7 +444,7 @@ button.btn:focus {
 }
 
 .modal-content {
-  background: url('/wp-content/themes/customwptheme/assets/img/tile.jpg') top left repeat;
+  background: url('assets/img/tile.jpg') top left repeat;
 }
 
 .badge.social {
@@ -474,7 +474,7 @@ button.btn:focus {
 
 /* HERO */
 #hero {
-  background: url('/wp-content/themes/customwptheme/assets/img/hero-bg.jpg') 50% 0 repeat fixed;
+  background: url('assets/img/hero-bg.jpg') 50% 0 repeat fixed;
   padding: 40px 0;
   min-height: 500px;
   color: white;
@@ -567,12 +567,12 @@ section h3 {
 }
 
 .feature-image-default {
-  background: url('/wp-content/themes/customwptheme/assets/img/stuff-feature.jpg') no-repeat;
+  background: url('assets/img/stuff-feature.jpg') no-repeat;
   background-size: cover;
 }
 
 .feature-image-default-alt {
-  background: url('/wp-content/themes/customwptheme/assets/img//hipster-stuff.jpg') no-repeat;
+  background: url('assets/img//hipster-stuff.jpg') no-repeat;
   background-size: cover;
 }
 
@@ -583,7 +583,7 @@ section h3 {
 
 .section-header {
   text-align: center;
-  line-height: 0;
+  /* line-height: 1.7; */
 }
 
 #optin {
@@ -612,14 +612,14 @@ section h3 {
 }
 
 #featurette {
-  background: url('/wp-content/themes/customwptheme/assets/img/stuff-bg.jpg') 50% 100% repeat fixed;
+  background: url('assets/img/stuff-bg.jpg') 50% 100% repeat fixed;
   background-size: cover;
   text-align: center;
   color: #fff;
 }
 
 #instructor {
-  background: white url('/wp-content/themes/customwptheme/assets/img/brad-elvis.png') 90% -10px no-repeat;
+  background: white url('assets/img/brad-elvis.png') 90% -10px no-repeat;
 }
 
 #instructor h2 {
@@ -664,7 +664,7 @@ section h3 {
 
 #signup {
   text-align: center;
-  background: url('/wp-content/themes/customwptheme/assets/img/hipster-stuff.jpg') center center repeat fixed;
+  background: url('assets/img/hipster-stuff.jpg') center center repeat fixed;
   background-size: cover;
   color: #fff;
   padding: 140px 0;
@@ -862,7 +862,7 @@ i.ci {
   display: inline-block;
   height: 40px;
   width: 40px;
-  background: url('/wp-content/themes/customwptheme/assets/img/icon-sprite.png') no-repeat;
+  background: url('assets/img/icon-sprite.png') no-repeat;
 }
 
 .ci.ci-computer         { background-position: 0 0;}

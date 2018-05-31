@@ -308,64 +308,25 @@ get_header(); ?>
       <div class="row justify-content-center">
         <div class="col-sm-8">
           <h2>What People Are Saying About Brad</h2>
-          <div class="row testimonial">
-            <div class="col-sm-4">
-              <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/brennan.jpg" alt="Brennan">
-            </div>
-            <div class="col-sm-8">
-              <blockquote>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia in a voluptates iure optio nihil, consequatur ex incidunt
-                dolores aperiam corrupti possimus hic earum nisi corporis veniam! Blanditiis corrupti, tempora impedit mollitia
-                ratione assumenda at error recusandae ipsa est, animi, a vero nulla dolorem deleniti inventore! Corporis
-                non tempore reprehenderit?
-                <cite>&mdash; Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, quasi.</cite>
-              </blockquote>
-            </div>
-          </div>
 
-          <div class="row testimonial">
-            <div class="col-sm-4">
-              <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/ben.png" alt="Ben">
+          <?php $loop = new WP_Query( array( 'post_type' => 'testimonials', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+          <?php while( $loop->have_posts() ) : $loop->the_post(); ?>
+            <div class="row testimonial">
+              <div class="col-sm-4">
+                <?php
+                  if(has_post_thumbnail()) {
+                    the_post_thumbnail( array(200, 200));
+                  }
+                ?>
+              </div>
+              <div class="col-sm-8">
+                <blockquote><?php the_content(); ?>
+                  <cite><?php the_title(); ?></cite>
+                </blockquote>
+              </div>
             </div>
-            <div class="col-sm-8">
-              <blockquote>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia in a vmus hic earum nisi corporis veniam! Blanditiis corrupti, tempora impedit mollitia
-                ratione assumenda at error recusandae ipsa est, animi, a vero nulla dolorem deleniti inventore! Corporis
-                non tempore reprehenderit?
-                <cite>&mdash; Lorem ipsum dolor, amet consectetur adipisicing elit. Repudiandae, quasi.</cite>
-              </blockquote>
-            </div>
-          </div>
+          <?php endwhile; ?>
 
-          <div class="row testimonial">
-            <div class="col-sm-4">
-              <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/aj.png" alt="Aj">
-            </div>
-            <div class="col-sm-8">
-              <blockquote>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia in a voluptates iure optio nihil, consequatur ex incidunt
-                dolores aperiam coris corrupti, tempora impedit mollitia
-                ratione assumenda at error recusandae ipsa est, animi, a vero nulla dolorem deleniti inventore! Corporis
-                non tempore reprehenderit?
-                <cite>&mdash; Lorsit amet consectetur adipisicing elit. Repudiandae, quasi.</cite>
-              </blockquote>
-            </div>
-          </div>
-
-          <div class="row testimonial">
-            <div class="col-sm-4">
-              <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/ernest.png" alt="Ernest">
-            </div>
-            <div class="col-sm-8">
-              <blockquote>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia in a voluptates iure optio nihil, consequatur ex incidunt
-                dolores aperiam corrupti possimus hic earum nisi
-                ratione assumenda at error recusandae ipsa est, animi, a vero nulla dolorem deleniti inventore! Corporis
-                non tempore reprehenderit?
-                <cite>&mdash; Lorem ipsum dolor, sit amet adipisicing elit. Repudiandae, quasi.</cite>
-              </blockquote>
-            </div>
-          </div>
         </div>
       </div>
     </div>

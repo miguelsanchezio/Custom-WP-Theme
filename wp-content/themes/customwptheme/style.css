@@ -847,6 +847,20 @@ footer li.signup-link a:hover {
   border-top: solid 1px #eee;
 }
 
+/* specific Wordpress comment styles */
+#comments footer.comment-meta {
+  background: none;
+  color: inherit;
+}
+
+#comments footer.comment-meta a {
+  color: inherit;
+}
+
+#comments .comment-metadata {
+  margin: 10px 0 0;
+}
+
 /* RESOURCES */
 .resource {
   width: 31.333333333%;

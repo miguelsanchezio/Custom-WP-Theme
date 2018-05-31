@@ -10,19 +10,20 @@
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<section class="feature-image feature-image-default-alt" data-type="background" data-speed="2">
+		<h1 class="page-title">
+			<?php
+			/* translators: %s: search query. */
+			printf( esc_html__( 'Search Results for: %s', 'customwptheme' ), '<span>' . get_search_query() . '</span>' );
+			?>
+		</h1>
+	</section>
+	
+	<div class="container">
+		<div id="primary" class="row">
+			<main id="content" class="col-sm-8">
 
 		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'customwptheme' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
 
 			<?php
 			/* Start the Loop */
@@ -47,9 +48,13 @@ get_header();
 		endif;
 		?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+			</main>
+			<aside class="col-sm-4">
+				<?php get_sidebar(); ?>
+			</aside>
+		</div>
+	</div>
 
 <?php
-get_sidebar();
+
 get_footer();

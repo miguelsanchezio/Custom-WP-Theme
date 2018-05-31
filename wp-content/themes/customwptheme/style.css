@@ -736,8 +736,9 @@ footer li.signup-link a:hover {
   font-size: 24px;
 }
 
-.post-image {
-  height: auto;
+.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
+    height: auto; 
+    width: 100%;
 }
 
 .post-details {

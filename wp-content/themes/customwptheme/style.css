@@ -1002,3 +1002,9 @@ button[type="submit"]:hover {
 .footer-menu li:not(:last-child){
   margin-right: 10px;
 }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

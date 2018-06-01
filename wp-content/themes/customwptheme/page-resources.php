@@ -14,7 +14,7 @@ $thumbnail_url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
       <h1 class="page-title"><?php the_title(); ?></h1>
   </section>
 <?php } else { ?>
-  <section class="feature-image featured-image-default" data-type="background" data-speed="2">
+  <section class="feature-image featured-image-default-alt" data-type="background" data-speed="2">
       <h1 class="page-title"><?php the_title(); ?></h1>
   </section>
 <?php } ?>
@@ -60,7 +60,7 @@ $thumbnail_url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
           <?php endwhile; wp_reset_query(); ?>
 
         </div> <!-- resource-row -->
-
+        
       </section> <!-- main-content -->
     </div> <!-- col -->
   </div> <!-- row -->

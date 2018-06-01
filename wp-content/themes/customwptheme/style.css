@@ -992,3 +992,13 @@ button[type="submit"]:hover {
     min-height: 0;
   }
 }
+
+.footer-menu {
+  text-align: center;
+  display: flex;
+  list-style: none;
+}
+
+.footer-menu li:not(:last-child){
+  margin-right: 10px;
+}

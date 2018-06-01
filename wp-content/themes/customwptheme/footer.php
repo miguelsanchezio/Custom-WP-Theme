@@ -24,29 +24,39 @@
 
 	<footer>
     <div class="container">
-      <div class="row">
+      <div class="row justify-content-around">
         <div class="col-sm-3">
           <p>
             <a href="#"><img src="<?php bloginfo('template_directory')?>/assets/img/logo.png" alt="Bootstrap To Wordpress"></a>
           </p>
         </div>
         <div class="col-sm-6">
-          <nav>
-            <ul class="list-inline text-center">
-              <li class="list-inline-item"><a href="#">Home</a></li>
-              <li class="list-inline-item"><a href="#">Blog</a></li>
-              <li class="list-inline-item"><a href="#">Resources</a></li>
-              <li class="list-inline-item"><a href="#">Contact</a></li>
-              <li class="list-inline-item signup-link"><a href="#">Sign up now</a></li>
-            </ul>
-          </nav>
+          <div class="d-flex justify-content-center">
+          <?php
+            wp_nav_menu([
+              'theme_location'  => 'footer',
+              'container'       => 'nav',
+              'menu_class'      => 'footer-menu'
+            ]);
+          ?>
+          </div>
         </div>
         <div class="col-sm-3">
-          <p class="text-right">&copy; 2018 BH</p>
+          <p class="text-right">&copy; <?php echo date('Y'); ?> BootstrapToWordpress</p>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- <nav>
+    <ul class="list-inline text-center">
+      <li class="list-inline-item"><a href="#">Home</a></li>
+      <li class="list-inline-item"><a href="#">Blog</a></li>
+      <li class="list-inline-item"><a href="#">Resources</a></li>
+      <li class="list-inline-item"><a href="#">Contact</a></li>
+      <li class="list-inline-item signup-link"><a href="#">Sign up now</a></li>
+    </ul>
+  </nav> -->
   
   <!-- MODAL -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
